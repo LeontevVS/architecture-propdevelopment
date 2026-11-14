@@ -1,0 +1,45 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Безопасность данных" id="X3HXaGEVIeYLn2m0X_1a">
+    <mxGraphModel dx="2078" dy="824" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <object label="&lt;b style=&quot;font-size:18px&quot;&gt;Собственник&lt;/b&gt;&lt;br&gt;[Person]&lt;br&gt;&lt;br&gt;Пользуется сервисами дома и разрешённым доступом." c4Name="Собственник / жилец" c4Type="Person" c4Description="Пользуется сервисами дома и разрешённым доступом." id="EYRxM-pHR-kYy2kbrwqi-1275">
+          <mxCell parent="1" style="shape=mxgraph.c4.person2;whiteSpace=wrap;html=1;fillColor=#08427B;strokeColor=#08427B;fontColor=#FFFFFF;fontSize=14;align=center;verticalAlign=middle;spacing=16;" vertex="1">
+            <mxGeometry height="200" width="320" x="2200" y="2020" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="&lt;b style=&quot;font-size:18px&quot;&gt;Посетитель&lt;/b&gt;&lt;br&gt;[Person]&lt;br&gt;&lt;br&gt;Вызывает жильца через домофон." c4Name="Посетитель" c4Type="Person" c4Description="Вызывает жильца через домофон." id="EYRxM-pHR-kYy2kbrwqi-1276">
+          <mxCell parent="1" style="shape=mxgraph.c4.person2;whiteSpace=wrap;html=1;fillColor=#08427B;strokeColor=#08427B;fontColor=#FFFFFF;fontSize=14;align=center;verticalAlign=middle;spacing=16;" vertex="1">
+            <mxGeometry height="200" width="280" x="2770" y="2020" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="&lt;b style=&quot;font-size:18px&quot;&gt;Сервисы для собственников PropDevelopment&lt;/b&gt;&lt;br&gt;[Software System]&lt;br&gt;&lt;br&gt;Предоставляет услуги ЖКУ и «Умного дома» через текущее мобильное приложение, учитывает права доступа к дому." c4Name="Сервисы для собственников PropDevelopment" c4Type="Software System" c4Description="Предоставляет услуги ЖКУ и «Умного дома» через текущее мобильное приложение, учитывает права доступа к дому." id="EYRxM-pHR-kYy2kbrwqi-1277">
+          <mxCell parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#1168BD;strokeColor=#1168BD;fontColor=#FFFFFF;fontSize=14;align=center;verticalAlign=middle;spacing=16;" vertex="1">
+            <mxGeometry height="220" width="380" x="1680" y="2440" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="&lt;b style=&quot;font-size:18px&quot;&gt;Платформа «Умный дом» партнёра&lt;/b&gt;&lt;br&gt;[External Software System]&lt;br&gt;&lt;br&gt;Управляет домофонами и шлагбаумами. Распознаёт лица и номера автомобилей; автоматически открывает доступ при наличии разрешения." c4Name="Платформа «Умный дом» партнёра" c4Type="External Software System" c4Description="Управляет домофонами и шлагбаумами. Распознаёт лица и номера автомобилей; автоматически открывает доступ при наличии разрешения." id="EYRxM-pHR-kYy2kbrwqi-1278">
+          <mxCell parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#777777;strokeColor=#777777;fontColor=#FFFFFF;fontSize=14;align=center;verticalAlign=middle;spacing=16;" vertex="1">
+            <mxGeometry height="220" width="440" x="2660" y="2440" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="EYRxM-pHR-kYy2kbrwqi-1279" edge="1" parent="1" source="EYRxM-pHR-kYy2kbrwqi-1275" style="edgeStyle=none;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#555555;strokeWidth=2;fontColor=#333333;fontSize=14;labelBackgroundColor=#FFFFFF;align=center;exitX=0.15;exitY=1;entryX=0.5;entryY=0;" target="EYRxM-pHR-kYy2kbrwqi-1277" value="Через текущее мобильное приложение:&lt;br&gt;принимает видеозвонок, открывает дверь,&lt;br&gt;управляет шлагбаумом">
+          <mxGeometry relative="1" x="-0.05" as="geometry" />
+        </mxCell>
+        <mxCell id="EYRxM-pHR-kYy2kbrwqi-1280" edge="1" parent="1" source="EYRxM-pHR-kYy2kbrwqi-1275" style="edgeStyle=none;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#555555;strokeWidth=2;fontColor=#333333;fontSize=14;labelBackgroundColor=#FFFFFF;align=center;exitX=0.85;exitY=1;entryX=0.2;entryY=0;" target="EYRxM-pHR-kYy2kbrwqi-1278" value="Проходит по лицу;&lt;br&gt;въезжает по номеру автомобиля">
+          <mxGeometry relative="1" x="0.1" as="geometry" />
+        </mxCell>
+        <mxCell id="EYRxM-pHR-kYy2kbrwqi-1281" edge="1" parent="1" source="EYRxM-pHR-kYy2kbrwqi-1276" style="edgeStyle=none;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#555555;strokeWidth=2;fontColor=#333333;fontSize=14;labelBackgroundColor=#FFFFFF;align=center;exitX=0.5;exitY=1;entryX=0.8;entryY=0;" target="EYRxM-pHR-kYy2kbrwqi-1278" value="Звонит в домофон">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EYRxM-pHR-kYy2kbrwqi-1282" edge="1" parent="1" source="EYRxM-pHR-kYy2kbrwqi-1277" style="edgeStyle=none;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#555555;strokeWidth=2;fontColor=#333333;fontSize=14;labelBackgroundColor=#FFFFFF;align=center;exitX=1;exitY=0.25;entryX=0;entryY=0.25;" target="EYRxM-pHR-kYy2kbrwqi-1278" value="Передаёт разрешения доступа к дому,&lt;br&gt;команды открытия двери и шлагбаума">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EYRxM-pHR-kYy2kbrwqi-1283" edge="1" parent="1" source="EYRxM-pHR-kYy2kbrwqi-1278" style="edgeStyle=none;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#555555;strokeWidth=2;fontColor=#333333;fontSize=14;labelBackgroundColor=#FFFFFF;align=center;exitX=0;exitY=0.75;entryX=1;entryY=0.75;" target="EYRxM-pHR-kYy2kbrwqi-1277" value="Передаёт вызов и видеопоток домофона,&lt;br&gt;события доступа и результаты команд">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
