@@ -1,0 +1,40 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: domain-viewers
+subjects:
+  - kind: ServiceAccount
+    name: viewer
+  - kind: ServiceAccount
+    name: operator
+  - kind: ServiceAccount
+    name: security-auditor
+    namespace: default
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: domain-viewer
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: domain-operators
+subjects:
+  - kind: ServiceAccount
+    name: operator
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: domain-operator
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: domain-secret-readers
+subjects:
+  - kind: ServiceAccount
+    name: secret-reader
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: domain-secret-reader
